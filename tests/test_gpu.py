@@ -1,6 +1,5 @@
 import torch
 import logging
-import warnings
 
 # Configure logging
 logging.basicConfig(
@@ -21,23 +20,16 @@ def test_gpu_access():
     logging.info("Starting GPU accessibility test...")
     try:
         if torch.cuda.is_available():
-            gpu_name = torch.cuda.get_device_name(0)
-            print(f"{Colors.GREEN}GPU is accessible: {gpu_name}{Colors.RESET}")
-            logging.info(f"GPU detected: {gpu_name}")
+            logging.info(f"{Colors.GREEN}GPU is accessible: {Colors.RESET}")
+            for idx in range(torch.cuda.device_count()):
+                logging.info(f"{Colors.GREEN}GPU {idx}: {torch.cuda.get_device_name(idx)}{Colors.RESET}")
             return True
         else:
-            print(f"{Colors.RED}No GPU is accessible.{Colors.RESET}")
-            logging.warning("No GPU is accessible.")
+            logging.warning(f"{Colors.YELLOW}No GPU is accessible.{Colors.RESET}")
             return False
     except Exception as e:
-        print(f"{Colors.YELLOW}An error occurred: {e}{Colors.RESET}")
-        logging.error(f"Error during GPU test: {e}")
-        warnings.warn(f"Test failed due to an exception: {e}")
+        logging.error(f"{Colors.RED}An error occurred: {e}{Colors.RESET}")
         return False
 
 if __name__ == "__main__":
-    result = test_gpu_access()
-    if result:
-        logging.info(f"{Colors.GREEN}Test passed: GPU is accessible.{Colors.RESET}")
-    else:
-        logging.info(f"{Colors.RED}Test failed: GPU is not accessible.{Colors.RESET}")
+    test_gpu_access()

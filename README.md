@@ -11,7 +11,7 @@ Welcome to the "Introduction to Deep Learning" course repository. This repositor
 
 ## Introduction
 
-This course covers the fundamentals of deep learning, including neural networks, training techniques, and practical applications. We utilize the following technologies:
+This course covers the fundamentals of deep learning, including neural networks, training techniques, and practical applications. We use the following technologies:
 
 - [PyTorch](https://pytorch.org/): An open-source machine learning library.
 - [Lightning](https://lightning.ai/): A lightweight PyTorch wrapper for high-performance AI research.
@@ -59,6 +59,12 @@ Introduction-to-Deep-Learning/
 ├── setup.sh                # Setup script for environment and dependencies
 ├── README.md               # Project overview and instructions
 └── requirements.txt        # List of required packages
+```
+
+You can for example test if gpu acceleration is available on your machine using the following script:
+
+```bash
+python tests/test_gpu.py
 ```
 
 ## Usage
