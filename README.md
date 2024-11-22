@@ -1,6 +1,6 @@
 # Introduction to Deep Learning
 
-Welcome to the "Introduction to Deep Learning" course repository. This repository contains materials, code, and resources to support your learning journey in deep learning using PyTorch, Lightning, and other essential libraries. It is still in the making, and will become more furnished as time goes.
+Welcome to the "Introduction to Deep Learning" course repository. This repository contains materials, code, and resources to support your learning journey in deep learning using PyTorch, and other essential libraries. It is still in the making, and will become more furnished as time goes.
 ## Table of Contents
 
 - [Introduction](#introduction)
