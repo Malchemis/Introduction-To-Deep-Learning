@@ -8,7 +8,7 @@ conda create -n iDL python=3.12 -y
 conda activate iDL
 
 # Install PyTorch and Lightning
-conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
+conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia -y
 
 # Install using pip the other packages
 pip install -r requirements.txt
