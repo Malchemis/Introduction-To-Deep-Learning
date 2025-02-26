@@ -504,37 +504,3 @@ def train_model(
     model.load_state_dict(torch.load(os.path.join(result_folder, f"{model_name}_best.pth")))
 
     return model
-
-
-# Example of how to use these functions in a notebook:
-"""
-from model_architectures import (
-    BaselineModel, DeepModel, DropoutModel, BatchNormModel, CompleteModel,
-    run_experiments, train_model
-)
-
-# Option 1: Train and evaluate a single model
-model = train_model(
-    model_class=CompleteModel,
-    model_name="CompleteModel",
-    n_features=train_embeddings.shape[1],
-    train_loader=train_loader,
-    valid_loader=valid_loader,
-    device=device,
-    result_folder=resultFolder,
-    lr=0.001,
-    epochs=50
-)
-
-# Option 2: Run experiments with multiple model architectures
-results = run_experiments(
-    n_features=train_embeddings.shape[1], 
-    train_loader=train_loader,
-    valid_loader=valid_loader,
-    test_loader=test_loader,
-    device=device,
-    result_folder=resultFolder,
-    epochs=30,
-    lr=0.001
-)
-"""
