@@ -1,6 +1,11 @@
-pandas
-scikit-learn
-matplotlib
-seaborn
+pandas~=2.2.3
+scikit-learn~=1.5.2
+matplotlib~=3.9.3
+seaborn~=0.13.2
 lightning
 tensorboard
+torchinfo~=1.8.0
+torchvision~=0.20.1
+tqdm~=4.67.1
+pillow~=11.0.0
+numpy~=1.26.4

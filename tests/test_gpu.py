@@ -8,12 +8,14 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 
+
 # ANSI color codes for terminal output
 class Colors:
     GREEN = "\033[92m"
     RED = "\033[91m"
     YELLOW = "\033[93m"
     RESET = "\033[0m"
+
 
 def test_gpu_access():
     """Test if a GPU is accessible."""
@@ -30,6 +32,7 @@ def test_gpu_access():
     except Exception as e:
         logging.error(f"{Colors.RED}An error occurred: {e}{Colors.RESET}")
         return False
+
 
 if __name__ == "__main__":
     test_gpu_access()
