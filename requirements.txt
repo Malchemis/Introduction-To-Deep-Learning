@@ -4,6 +4,8 @@ matplotlib~=3.9.3
 seaborn~=0.13.2
 lightning
 tensorboard
+gymnasium[classic-control]
+torchinfo
 torchinfo~=1.8.0
 torchvision~=0.20.1
 tqdm~=4.67.1
