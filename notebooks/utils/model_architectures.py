@@ -486,7 +486,7 @@ def train_model(
             best_val_loss = epoch_val_loss
             model_save_path = os.path.join(result_folder, f"{model_name}_best.pth")
             torch.save(model.state_dict(), model_save_path)
-            print(f"Epoch {epoch + 1}: Saved new best model with validation loss: {epoch_val_loss:.4f}")
+            #print(f"Epoch {epoch + 1}: Saved new best model with validation loss: {epoch_val_loss:.4f}")
 
     # Plot training curve
     plt.figure(figsize=(10, 5))
